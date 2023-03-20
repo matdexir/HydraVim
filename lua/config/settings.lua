@@ -11,7 +11,8 @@ local options = {
         smartindent = true,
         termguicolors = true,
         showmode = false,
-        fillchars = { eob = " ", fold = " ", vert = "│"}
+        fillchars = { eob = " ", fold = " ", vert = "│"},
+        list = true
     },
     o = {
         syntax = 'on',
@@ -26,8 +27,10 @@ local options = {
         wrap = false
     },
     g = {
-    mapleader = ' ',
-    maplocalleader = ' ',
+        mapleader = ' ',
+        maplocalleader = ' ',
+        loaded_netrw = 1,
+        loaded_netrwPlugin = 1,
     }
 }
 
