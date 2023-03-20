@@ -2,9 +2,20 @@
 
 <p align="center"><img src="https://img.shields.io/github/issues/HydraVim/Hydravim?color=171b20&label=Issues%20%20&logo=gnubash&labelColor=e05f65&logoColor=ffffff">&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/github/forks/Hydravim/HydraVim?color=171b20&label=Forks%20%20&logo=git&labelColor=f1cf8a&logoColor=ffffff">&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/github/stars/HydraVim/HydraVim?color=171b20&label=Stargazers&logo=github&labelColor=70a5eb">&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/-Works on my machine-%2378dba9?style=flat&logo=linux&labelColor=171b20&logoColor=ffffff"></p>
 
-</b><br>Welcome to official <b>  ️Hydra 🌊</b> Repository ! Carefully designed with usability and funcionality in mind , keep the lightness on resources !</p>
+</b><br>Welcome to official **Hydra 🌊** Repository! Carefully designed with usability and funcionality in mind , keep the lightness on resources! All-in-one for back-end and front-end developers.</p>
 
 <br />
+
+## ✨ Features
+  - Fast startup times
+  - Autocompletion with nvim-cmp
+  - Terminal with Toggleterm
+  - LSP (Language Server Protocol)
+  - Automatic LSP with Mason and LSP Config.
+  - Syntax highlighting with Treesitter
+  - Statusline and Bufferline
+  - Integration with Git
+  - Easily customize
 
 <details>
   <summary> <b>Themes </b> </summary>
@@ -27,16 +38,12 @@
 
 <br>
 
-## 🔒 Mandatory Dependencies :
+## 🎯 Requirements:
 
-- <a href="https://neovim.io/" target="_blank"> Neovim </a> 0.8+
-- <a href="https://nodejs.org" target="_blank"> Nodejs </a> 16.0+
-- <a href="https://github.com/neovim/pynvim" target="_blank"> Pynvim </a> 0.4.3+
-- <a href="https://classic.yarnpkg.com/lang/en/docs/install/" target="_blank"> Yarn </a> 1.22.0+
- 
-### 🔓 Optional Dependencies :
-- <a href="https://www.nerdfonts.com/" target="_blank"> Nerd Fonts </a>
-- <a href="https://github.com/jesseduffield/lazygit" target="_blank"> Lazygit </a>
+- [Neovim](https://neovim.io/) 8.0+
+- [Pynvim](https://github.com/neovim/pynvim) 0.4.3+
+- [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/) 1.22.0+
+- [Nerd Fonts](https://www.nerdfonts.com/) (optional)
 
 <br>
 
@@ -45,8 +52,14 @@
 After dependencies setup  , execute the command below . Make sure that <a href="https://git-scm.com/" target="_blank"> Git </a> is installed
 
 ### 🐧 Linux/🍎macOS
-```shell
-sh <(curl https://raw.githubusercontent.com/HydraVim/HydraVim/main/script/install.sh)
+ - Backup of your current nvim
+```bash
+mv ~/.config/nvim ~/.config/nvim.bak
+```
+- Clone the HydraVim and start Neovim
+
+```bash
+git clone https://github.com/HydraVim/HydraVim.git --depth 1 --branch main ~/.config/nvim && nvim
 ```
 
 ### 🪟 Windows - Test
@@ -60,217 +73,38 @@ git clone https://github.com/HydraVim/HydraVim.git $HOME\AppData\Local\nvim --de
 ## ⭕ Uninstall
   
 ### 🐧 Linux/🍎macOS
-```shell
-rm -rf ~/.config/nvim ~/.local/share/nvim ~/.cache/nvim ~/.config/HydraVim ~/.config/coc /home/$USER/.vim
+```bash
+rm -rf ~/.config/nvim
+rm -rf ~/.local/share/nvim
+rm -rf ~/.cache/nvim
 ```
 
 ### 🪟 Windows
 - Powershell
 ```powershell
 Remove-Item -Path $HOME\AppData\Local\nvim -Force
-```
-```powershell
 Remove-Item -Path $HOME\AppData\Local\nvim-data -Force
 ```
-  
-<br />
-  
-## 🗒️ Recomendations
-To avoid delays put `stty -ixon` on `.bashrc`, do this with command below
-``` shell
-echo 'stty -ixon' >> ~/.bashrc
-```
 
-<br />  
-  
-## 🔠 Languages
-For each language its necessary an individually suport for your funcionality on Hydravim , know as <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> Language servers </a>.<br>
-
-The autocomplete is <a href="https://github.com/neoclide/coc.nvim" target="_blank"> Coc.nvim </a> and all your official documentation its avaliable in <a href="https://github.com/neoclide/coc.nvim" target="_blank"> Coc.nvim </a>. 
-  
-```C/C++```, ```HTML```, ```Java```, ```Javascript/Typescript```, ```JSON```, ```Lua``` and ```Python``` can be installed trhough commands below , instructions for another languages <a href="" target="_blank"> Here.</a><p>
-
-  ### 🇨 C/C++
-<details>
-  <summary><b>Install Guide</b></summary>
-    
-- Install ```gcc```, ```g++``` and ```make```
-
-``` shell
-sudo apt-get install manpages-dev
-```
-- Install <a href="https://clangd.llvm.org/installation.html" target="_blank"> CLangd</a> >= 8.0, to autocomplete
-  
-``` shell
-sudo apt-get install clangd-12
-```
-- Run the below command to install  <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
-  
-``` shell
-nvim -c 'CocInstall coc-clangd'
-```
-</details>
-  
-<br />
-  
-### 🌐 HTML, CSS e JS
-  
-<details>
-  <summary><b>Install Guide</b></summary>
-  
-- Run the below command to install <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
-  
-``` shell
-nvim -c 'CocInstall coc-html coc-css coc-tsserver'
-```
-  
-</details>
-<br />
-
-### ♨️ Java
-<details>
-  <summary><b>Install Guide</b></summary>
-  
-- Instale o <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank"> Java JDK </a >>= 11<p>
-
-- Run the below command to install <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
-
-``` shell
-nvim -c 'CocInstall coc-java'
-```
-
-</details>
-<br />
-
-  ### <b> { } </b> JSON
-<details>
-
-  <summary><b>Install Guide</b></summary>
-
-- Run the below command to install <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
-
-``` shell
-nvim -c 'CocInstall coc-json'
-```
-</details>
-  
-<br />
-
-### 🌓 Lua
-<details>
-  <summary><b>Install Guide</b></summary>
-
-- Run the below command to install <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
-``` shell
-nvim -c 'CocInstall coc-sumneko-lua'
-```
-</details>
-
-<br />
-
-### 🐍 Python
-<details>
-  <summary><b>Install Guide</b></summary>
-- Install <a href="https://www.python.org/downloads/" target="_blank"> Python3 </a>
-  
-``` shell
-sudo apt install python3
-```
-
-- Run the command below to install <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
-  
-``` shell
-nvim -c 'CocInstall coc-python'
-```
-</details
-
-<br />
-
-<br />
- 
- ### 💎 Ruby
-<details>
-  <summary><b>Install Guide</b></summary>
-  
-- Install <a href="https://www.ruby-lang.org/" target="_blank"> Ruby </a>
-  
-``` shell
-sudo apt install ruby
-```
-
-- Install <a href="https://solargraph.org/" target="_blank"> Solargraph - lsp</a>
-  
-``` shell
-gem install solargraph
-```
-
-- Run the command below to install <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> solargraph in COC.</a>
-  
-``` shell
-nvim -c 'CocInstall coc-solargraph'
-```
-</details
-
-<br />
-
-<br />
- 
-### 🦀 Rust
-<details>
-  <summary><b>Install Guide</b></summary>
-  
-- Install <a href="https://www.rust-lang.org" target="_blank"> Rust</a>
-    
-``` shell
-sudo apt install rustc
-```
-    
-- Install rust-analyzer binary
-    
-```
- curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.local/bin/rust-analyzer
-```
-
-  Change permission to be executable
-```
- chmod +x ~/.local/bin/rust-analyzer 
-```
-  ⚠️ <b>Read with caution</b> :
-  If your ~/.local/bin is not in your path you should to add to your $PATH variable on Shell !
-  
-  To verify if exist <b>~/.local/bin</b> in your $PATH , type :
-  ```
- echo $PATH | whereis rust-analyzer
-  ```
-  
-  ```shell
-    # If your $PATH contains something like the output below , its already on your path
- $ /home/$USER/.cargo/bin or /home/$USER/.local/bin
-    
-    # Else
- export PATH=~/.local/bin:$PATH or put in your .zshrc .bashrc and so on.
-  ```
-  
- Restart your shell to apply changes , and done.
-  
-  ⚠️ <b> ATTENTION ! </b> ⚠️
-  ```shell
-  # Case the options above doesn't work try this
- sudo ln -s ~/.local/bin/rust-analyzer /usr/local/bin
-  ```
-  To make a symlink to binary directory restart your shell and done.
 <br>
 
-- Run the below command to install <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
-    
-``` shell
-nvim -c 'CocInstall coc-rust-analyzer'
-```
-</details>
-  
-<br />
+## 🔠 Languages
+
+Nvim supports Language Server Protocol (LSP), which means that it acts as a client for LSP servers. Thus, all language support is done through [Mason (LSP Installer)](https://github.com/williamboman/mason.nvim) and automatically configured by [LSP Config](https://github.com/neovim/nvim-lspconfig). Use the Mason command to manage your language servers.
+[Nvim-CMP](https://github.com/hrsh7th/nvim-cmp) is responsible for giving suggestions for completing your code, including snippets.
+Syntax highlighting is installed automatically through the
+[Tree-sitter](https://github.com/tree-sitter/tree-sitter)
+
+In short: Open HydarVim and start coding.
+
+Read more about lsp [here](https://neovim.io/doc/user/lsp.html).
+
+<br>
 
 ## 🐙 Live Server
+Development in real time.
+<details>
+  <summary> <b>Live Server Config</b> </summary>
 - Install Live-server
 ``` shell
 npm i -g live-server
@@ -279,24 +113,17 @@ npm i -g live-server
 ``` shell
 sudo npm i -g live-server
 ```
-
-- Run the below command to install <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
-
-``` shell
-nvim -c 'CocInstall coc-html coc-css coc-tsserver'
-```
 To use follow the instructions below <p>
-- Go to `index.html` on Hydravim and press `F5`, an window will open automatically on your default browser <p>
-- The server will be updated as soon as the files are saved
+- Go to `index.html` on Hydravim and open the terminal and type `live-server`, an window will open automatically on your default browser <p>
+- The server will be updated automatically.
 <br />
+</details>
 
-### <img width="auto" height="20px" src="https://github.com/oddlama/vane/blob/main/docs/vane.png"> General
-  
-<img src="https://img.shields.io/badge/Mantained:-Yes! (Bug fixes, Repository , Website..)-brightgreen?style=flat">
-<img src="https://img.shields.io/badge/State:-Optimized (Utilizable)-brightgreen?style=flat">
-<img src="https://img.shields.io/badge/RAM usage:-~138MB/Max-brightgreen?style=flat">
 
-## ❤️ Contributors
+## 💫 Thanks to
+We are grateful to the repositories, plugin authors and the Neovim community for making HydraVim possible.  They offer special thanks to AstroVim, NvChad, LunarVim and CosmicVim for their inspiration and resources, as well as to all the plugin developers who have created useful tools for Neovim.
+
+## 🎈 Contributors
   <span>
     <img src="https://user-images.githubusercontent.com/98850074/200189379-5b831bfd-a902-46c8-914e-284e53308dc2.png" width=100 height=100>
   </span>
@@ -306,13 +133,8 @@ To use follow the instructions below <p>
   </span>
 
 
+## 📖 General
 
-<b>Ko-Fi:</b><br>
-  [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/)
-
-<b>Librepay:</b> <br>
-<a href="https://liberapay.com/"><img alt="Donate usando liberepay" src="https://liberapay.com/assets/widgets/donate.svg"></a> 
-
-<br /> 
-
-<p align="center"><b> Se você gostou da nossa versão modificada do Vim e de alguma maneira quiser contrubuir com a nossa equipe fique avontade 😊</b> </p>
+<img src="https://img.shields.io/badge/Mantained:-Yes! (Bug fixes, Repository , Website..)-brightgreen?style=flat">
+<img src="https://img.shields.io/badge/State:-Optimized (Utilizable)-brightgreen?style=flat">
+<img src="https://img.shields.io/badge/RAM usage:-~138MB/Max-brightgreen?style=flat">
