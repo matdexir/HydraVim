@@ -14,7 +14,7 @@
   - Automatic LSP with Mason and LSP Config.
   - Syntax highlighting with Treesitter
   - Statusline and Bufferline
-  - Intraction with Git
+  - Integration with Git
   - Easily customize
 
 <details>
