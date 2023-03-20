@@ -1,3 +1,4 @@
 .ccls-cache
 .Session.vim
 plugin/
+lazy-lock.json

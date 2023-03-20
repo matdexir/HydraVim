@@ -1,10 +1,11 @@
 local modules = {
-	'plugins.packer',
-	'config.autosave',
-	'config.mappings',
 	'config.settings',
-	'core.updater',
+	'plugins.lazy',
+	'config.autocmd',
+	'config.mappings',
+	'config.command',
 	'theme.theme',
+	'plugins.folding',
 }
 
 for i, name in pairs(modules) do
