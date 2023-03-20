@@ -59,7 +59,7 @@ mv ~/.config/nvim ~/.config/nvim.bak
 - Clone the HydraVim and start Neovim
 
 ```bash
-https://github.com/HydraVim/HydraVim.git ~/.config/nvim --depth 1 && nvim
+git https://github.com/HydraVim/HydraVim.git ~/.config/nvim --depth 1 && nvim
 ```
 
 ### 🪟 Windows - Test
