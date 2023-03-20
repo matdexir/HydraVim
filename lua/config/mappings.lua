@@ -17,7 +17,6 @@ local local_mappings = {
         {'<C-z>', 'u'},										-- desfaz alterações no modo normal
         {'<C-v>', 'p<ESC>'},									-- colar no modo normal
         {'<C-a>', 'ggVG'},									-- selecionar tudo no modo normal
-        {'<leader>lg', "<CMD>TermExec size=10 direction=float cmd='lazygit && exit'<CR>"},
         {'<leader>e', '<CMD>NvimTreeToggle <CR>'},			-- selecionar tudo no modo normal
         {'<TAB>', '<CMD>BufferLineCycleNext<CR>'},			-- selecionnar aba esuqerda
         {'<S-TAB>', '<CMD>BufferLineCyclePrev<CR>'},			-- selecionar aba direita
@@ -27,9 +26,6 @@ local local_mappings = {
         {'<A-m>', '<CMD>ToggleTerm size=45 direction=vertical<CR>'},								-- abr o terminal
         {'<A-i>', '<CMD>ToggleTerm direction=float<CR>'},										-- abr o terminal
         {'<leader>i', '<CMD>ToggleTerm direction=float<CR>'},									-- abr o terminal
-        {'<leader>rr', "<CMD>TermExec size=10 direction=float cmd='ranger && exit'<CR>"},		-- abre o Ranger
-        {'<leader>th', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/lua/theme/theme.sh && exit'<CR>"}, 	-- HydarVim theme
-        {'<leader>uf', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/fix_list.sh'<CR>"}, 	 		-- HydarVim fix_list
         {'K', '<cmd>lua vim.lsp.buf.hover()<cr>'},
         {'gd', '<cmd>lua vim.lsp.buf.definition()<cr>'},
         {'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>'},
