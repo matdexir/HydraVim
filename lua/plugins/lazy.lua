@@ -24,7 +24,6 @@ require("lazy").setup({
 	},
 	{
 		'terrortylor/nvim-comment',
-		keys = {"v"},
 		event = {'BufReadPre', 'BufNewFile'},
 		config = function ()
 			require('plugins.comment')
@@ -45,7 +44,6 @@ require("lazy").setup({
 	{
 		'nvim-tree/nvim-tree.lua',
         dependencies = { 'nvim-tree/nvim-web-devicons' },
-		ft = "alpha",
 		cmd = { "NvimTreeToggle", "NvimTreeFocus"},
 		config = function()
 			require('plugins.nvim_tree')
@@ -88,7 +86,7 @@ require("lazy").setup({
 	{
 		'akinsho/toggleterm.nvim',
 		version = '*',
-		event = {"UIEnter"},
+		cmd = {"ToggleTerm"},
 		config = function()
 			require('plugins.toggleterm')
 		end
@@ -102,13 +100,13 @@ require("lazy").setup({
 			require('plugins.telescope')
 		end
 	},
-	-- {
-	-- 	'goolord/alpha-nvim',
-	--         dependencies = { 'nvim-tree/nvim-web-devicons' },
-	-- 	config = function()
-	-- 		require('plugins.alpha')
-	-- 	end
-	-- },
+	{
+		'goolord/alpha-nvim',
+	        dependencies = { 'nvim-tree/nvim-web-devicons' },
+		config = function()
+			require('plugins.alpha')
+		end
+	},
 	{
 		'lukas-reineke/indent-blankline.nvim',
 		event = {'BufRead', 'BufNewFile'},
@@ -154,7 +152,8 @@ require("lazy").setup({
 		'rafamadriz/friendly-snippets',
 		'honza/vim-snippets'
 		},
-	event = "InsertEnter",
+	event = {"InsertEnter"},
+	keys = {":", "/", "?"},
 	config = function ()
 		require('lsp.cmp')
 	end
