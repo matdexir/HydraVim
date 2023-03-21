@@ -18,7 +18,10 @@ require("lazy").setup({
 		ft = {'markdown'},
 	},
 
-	{'kazhala/close-buffers.nvim'},
+	{
+		'kazhala/close-buffers.nvim',
+		event = {'BufReadPre', 'BufNewFile'},
+	},
 	{
 		'terrortylor/nvim-comment',
 		keys = {"v"},
@@ -39,9 +42,9 @@ require("lazy").setup({
             ts_update()
         end,
     },
-
 	{
 		'nvim-tree/nvim-tree.lua',
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
 		ft = "alpha",
 		cmd = { "NvimTreeToggle", "NvimTreeFocus"},
 		config = function()
@@ -61,6 +64,7 @@ require("lazy").setup({
 
 	{
 		'nvim-lualine/lualine.nvim',
+		event = "BufEnter",
 		config = function()
 			require('plugins.lualine')
 		end
@@ -73,7 +77,6 @@ require("lazy").setup({
 			require('plugins.gitsigns')
 		end
 	},
-	{'sheerun/vim-polyglot'},
 	{
 		'akinsho/bufferline.nvim',
 		version = 'v3.*',
@@ -92,35 +95,30 @@ require("lazy").setup({
 	},
 	{
 		'nvim-telescope/telescope.nvim',
+		dependencies = { 'nvim-lua/plenary.nvim' },
 		version = '0.1.0',
+		cmd = "Telescope",
 		config = function()
 			require('plugins.telescope')
 		end
 	},
-
-	{'nvim-tree/nvim-web-devicons'},
-	{
-		'goolord/alpha-nvim',
-		config = function()
-			require('plugins.alpha')
-		end
-	},
-
-	{'nvim-lua/plenary.nvim'},
+	-- {
+	-- 	'goolord/alpha-nvim',
+	--         dependencies = { 'nvim-tree/nvim-web-devicons' },
+	-- 	config = function()
+	-- 		require('plugins.alpha')
+	-- 	end
+	-- },
 	{
 		'lukas-reineke/indent-blankline.nvim',
-		event = {'BufReadPre', 'BufNewFile'},
+		event = {'BufRead', 'BufNewFile'},
 		config = function()
 			require('plugins.indent_line')
 		end
 	},
-
-	{'ryanoasis/vim-devicons'},
-
-	{'honza/vim-snippets'},
 	{
 		'mg979/vim-visual-multi',
-		event = {'BufReadPre', 'BufNewFile'},
+		event = {'BufRead', 'BufNewFile'},
 		config = function ()
 			require('plugins.vim_multi')
 		end
@@ -128,6 +126,7 @@ require("lazy").setup({
 
 	{
 		'norcalli/nvim-colorizer.lua',
+		event = {"BufRead"},
 		config = function ()
 			require('plugins.colorizer')
 		end
@@ -153,19 +152,25 @@ require("lazy").setup({
 		'SirVer/ultisnips',
 		'quangnguyen30192/cmp-nvim-ultisnips',
 		'rafamadriz/friendly-snippets',
+		'honza/vim-snippets'
 		},
+	event = "InsertEnter",
 	config = function ()
 		require('lsp.cmp')
 	end
 	},
-	{'catppuccin/nvim', name = 'catppuccin', build = ":colorscheme catppuccin-mocha"},
-	'projekt0n/github-nvim-theme',
-	'navarasu/onedark.nvim',
-	'tiagovla/tokyodark.nvim',
-	'folke/tokyonight.nvim',
-	'ellisonleao/gruvbox.nvim',
-	'luisiacc/gruvbox-baby',
-	'rafamadriz/neon',
-	'shaunsingh/nord.nvim',
-    'rmehri01/onenord.nvim',
+	{
+		'catppuccin/nvim',
+		name = 'catppuccin',
+		build = ":colorscheme catppuccin-mocha"
+	},
+	{'projekt0n/github-nvim-theme', lazy = true},
+	{'navarasu/onedark.nvim', lazy = true},
+	{'tiagovla/tokyodark.nvim', lazy = true},
+	{'folke/tokyonight.nvim', lazy = true},
+	{'ellisonleao/gruvbox.nvim', lazy = true},
+	{'luisiacc/gruvbox-baby', lazy = true},
+	{'rafamadriz/neon', lazy = true},
+	{'shaunsingh/nord.nvim', lazy = true},
+    {'rmehri01/onenord.nvim', lazy = true},
 })
