@@ -44,7 +44,8 @@ require("lazy").setup({
 	{
 		'nvim-tree/nvim-tree.lua',
         dependencies = { 'nvim-tree/nvim-web-devicons' },
-		cmd = { "NvimTreeToggle", "NvimTreeFocus"},
+		cmd = { "NvimTreeToggle", "NvimTreeFocus", "NvimTreeOpen", "NvimTreeFindFile", "NvimTreeFindFileToggle"},
+		ft = "alpha",
 		config = function()
 			require('plugins.nvim_tree')
 		end
@@ -100,13 +101,13 @@ require("lazy").setup({
 			require('plugins.telescope')
 		end
 	},
-	{
-		'goolord/alpha-nvim',
-	        dependencies = { 'nvim-tree/nvim-web-devicons' },
-		config = function()
-			require('plugins.alpha')
-		end
-	},
+	-- {
+	-- 	'goolord/alpha-nvim',
+	--         dependencies = { 'nvim-tree/nvim-web-devicons' },
+	-- 	config = function()
+	-- 		require('plugins.alpha')
+	-- 	end
+	-- },
 	{
 		'lukas-reineke/indent-blankline.nvim',
 		event = {'BufRead', 'BufNewFile'},
