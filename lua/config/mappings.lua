@@ -22,7 +22,7 @@ local local_mappings = {
         {'<S-TAB>', '<CMD>BufferLineCyclePrev<CR>'},			-- selecionar aba direita
         {'<C-w>', '<CMD>BDelete this<CR>'},					-- fechar aba
         {'<leader>p', '<CMD>BufferLineTogglePin<CR>'},		-- fechar aba
-        {'<A-h>', '<CMD>NvimTreeClose<CR> <CMD>ToggleTerm size=15 direction=horizontal<CR>'}, 	-- abr o terminal
+        {'<A-h>', '<CMD>ToggleTerm size=15 direction=horizontal<CR>'}, 	-- abr o terminal
         {'<A-m>', '<CMD>ToggleTerm size=45 direction=vertical<CR>'},								-- abr o terminal
         {'<A-i>', '<CMD>ToggleTerm direction=float<CR>'},										-- abr o terminal
         {'<leader>i', '<CMD>ToggleTerm direction=float<CR>'},									-- abr o terminal
