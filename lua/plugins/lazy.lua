@@ -17,7 +17,18 @@ require("lazy").setup({
 		build = 'cd app && yarn install',
 		ft = {'markdown'},
 	},
-
+	{
+		'sindrets/diffview.nvim',
+		dependencies = 'nvim-lua/plenary.nvim',
+		cmd = {
+			"DiffviewOpen",
+			"DiffviewClose",
+			"DiffviewToggleFiles",
+			"DiffviewFocusFiles",
+			"DiffviewRefresh",
+			"DiffviewFileHistory"
+		}
+	},
 	{
 		'kazhala/close-buffers.nvim',
 		event = {'BufReadPre', 'BufNewFile'},
