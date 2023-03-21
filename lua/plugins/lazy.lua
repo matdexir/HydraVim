@@ -5,7 +5,7 @@ if not vim.loop.fs_stat(lazypath) then
     "clone",
     "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
+    "--branch=stable",
     lazypath,
   })
 end
@@ -33,6 +33,21 @@ require("lazy").setup({
     {
         'nvim-treesitter/nvim-treesitter',
 		event = {"BufRead"},
+		cmd = {
+			"TSBufDisable",
+			"TSBufEnable",
+			"TSBufToggle",
+    		"TSDisable",
+    		"TSEnable",
+    		"TSToggle",
+    		"TSInstall",
+    		"TSInstallInfo",
+    		"TSInstallSync",
+    		"TSModuleInfo",
+    		"TSUninstall",
+    		"TSUpdate",
+    		"TSUpdateSync",
+		},
 		config = function()
 			require('lsp.treesitter')
 		end,
@@ -104,6 +119,7 @@ require("lazy").setup({
 	-- {
 	-- 	'goolord/alpha-nvim',
 	--         dependencies = { 'nvim-tree/nvim-web-devicons' },
+	--    cmd = "Alpha"
 	-- 	config = function()
 	-- 		require('plugins.alpha')
 	-- 	end

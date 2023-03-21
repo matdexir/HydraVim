@@ -12,7 +12,8 @@ local options = {
         termguicolors = true,
         showmode = false,
         fillchars = { eob = " ", fold = " ", vert = "│"},
-        list = true
+        list = true,
+        expandtab = true
     },
     o = {
         syntax = 'on',
