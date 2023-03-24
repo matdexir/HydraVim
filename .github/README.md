@@ -106,13 +106,17 @@ Development in real time.
 <details>
   <summary> <b>Live Server Config</b> </summary>
 - Install Live-server
+
 ``` shell
 npm i -g live-server
 ```
+
 - Case install fails
+
 ``` shell
 sudo npm i -g live-server
 ```
+
 To use follow the instructions below <p>
 - Go to `index.html` on Hydravim and open the terminal and type `live-server`, an window will open automatically on your default browser <p>
 - The server will be updated automatically.
