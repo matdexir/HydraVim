@@ -38,7 +38,7 @@
 
 <br>
 
-## 🎯 Requirements:
+## 🎯 Requirements
 
 - [Neovim](https://neovim.io/) 8.0+
 - [Pynvim](https://github.com/neovim/pynvim) 0.4.3+
