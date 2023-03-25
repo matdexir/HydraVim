@@ -105,6 +105,7 @@ Read more about lsp [here](https://neovim.io/doc/user/lsp.html).
 Development in real time.
 <details>
   <summary> <b>Live Server Config</b> </summary>
+  
 - Install Live-server
 
 ``` shell
