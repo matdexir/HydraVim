@@ -2,8 +2,8 @@ local local_mappings = {
     n = {
         ['<C-Q>'] = {'<ESC><CMD>q!<CR>'},
         ['<C-s>'] = {"<CMD>w<CR><CMD>echo 'Save '<CR>"},
-        ['<A-S-s>'] = {"<CMD>mksession! .session.vim<CR><CMD>echo 'Saved Session '<CR>"},
-        ['<A-S-l>'] = {"<CMD> :source .session.vim<CR><CMD>echo 'Loaded Session '<CR>"},
+        ['<A-S-s>'] = {"<CMD>call mkdir('.session/hydravim/', 'p') | mksession! .session/hydravim/session.vim<CR><CMD>echo 'Saved Session '<CR>"},
+        ['<A-S-l>'] = {"<CMD>source .session/hydravim/session.vim<CR><CMD>echo 'Loaded Session '<CR>"},
         ['<A-j>'] = {'<CMD>m .+1<CR>=='},
         ['<A-k>'] = {'<CMD>m .-2<CR>=='},
         ['<A-n>'] = {'<CMD>vsplit<CR>'},
