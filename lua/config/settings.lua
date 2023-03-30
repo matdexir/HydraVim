@@ -52,8 +52,3 @@ for type, table in pairs(options) do
     vim[type][option] = value
   end
 end
-
--- fold
-local cmd = vim.cmd
-cmd('highlight Folded ctermbg=NONE guibg=NONE')
-cmd('highlight FoldColumn ctermfg=NONE guifg=NONE')
