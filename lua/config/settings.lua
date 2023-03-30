@@ -48,7 +48,7 @@ local options = {
 }
 
 for type, table in pairs(options) do
-  for option, value in pairs(table) do
-    vim[type][option] = value
-  end
+    for option, value in pairs(table) do
+        vim[type][option] = value
+    end
 end

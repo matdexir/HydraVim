@@ -52,7 +52,7 @@ local local_mappings = {
         ['<leader>fo'] = { '<cmd> Telescope oldfiles <CR>'},
         ['<leader>gc'] = { '<cmd> Telescope git_commits <CR>'},
         ['<leader>gt'] = { '<cmd> Telescope git_status <CR>'},
-	    ['<leader>gb'] = { '<cmd>Telescope git_branches<cr>'},
+        ['<leader>gb'] = { '<cmd>Telescope git_branches<cr>'},
     },
 
     v = {
@@ -86,9 +86,9 @@ local local_mappings = {
 }
 
 for mode, mappings in pairs(local_mappings) do
-  for key, action in pairs(mappings) do
-    local default_options = { noremap = true, silent = true }
-    local options = action[2] or default_options
-    vim.api.nvim_set_keymap(mode, key, action[1], options)
-  end
+    for key, action in pairs(mappings) do
+        local default_options = { noremap = true, silent = true }
+        local options = action[2] or default_options
+        vim.api.nvim_set_keymap(mode, key, action[1], options)
+    end
 end

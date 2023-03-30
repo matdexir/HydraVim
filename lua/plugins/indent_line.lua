@@ -5,18 +5,18 @@ if not present then
 end
 
 indent_blankline.setup {
-  filetype_exclude = {
-    "terminal",
-    "lazy",
-    "lspinfo",
-    "TelescopePrompt",
-    "help",
-    "TelescopeResults",
-    "mason",
-    "NVimTree",
-    "alpha",
-    "",
-  },
+    filetype_exclude = {
+        "terminal",
+        "lazy",
+        "lspinfo",
+        "TelescopePrompt",
+        "help",
+        "TelescopeResults",
+        "mason",
+        "NVimTree",
+        "alpha",
+        "",
+    },
     buftype_exclude = { "terminal" },
     space_char_blankline = " ",
     show_current_context = true,
