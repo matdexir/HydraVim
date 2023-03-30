@@ -1,52 +1,48 @@
-local H = {}
+local M = {}
 
-H.sync_config_repo = function()
-    local response = vim.fn.input("Do you want to continue? (y/n): ")
-    if response == 'y' then
-        local branch = "main"
+local function async_update_hydravim()
+  local response = vim.fn.input("Continue with the update? (y/n): ")
+  if response ~= 'y' then
+    vim.schedule(function()
+      vim.api.nvim_echo({{"Update was cancelled.", "WarningMsg"}}, true, {})
+    end)
+    return
+  end
 
-        local nvim_config_path
-        if package.config:sub(1,1) == '\\' then
-            nvim_config_path = os.getenv("USERPROFILE") .. "\\AppData\\Local\\nvim"
-        else
-            nvim_config_path = os.getenv("HOME") .. "/.config/nvim"
-        end
+  vim.cmd "redraw"
+  vim.api.nvim_echo({{"Looking for updates for HydraVim...", "Normal"}}, true, {})
 
-        local git_fetch_command = "git -C " .. nvim_config_path .. " fetch -q"
-        local git_pull_command = "git -C " .. nvim_config_path .. " pull -q"
-        local git_status_command = "git -C " .. nvim_config_path .. " status -s -b"
-        local git_clean_command = "git -C " .. nvim_config_path .. " clean -q -f -d"
-        local git_reset_command = "git -C " .. nvim_config_path .. " reset -q --hard origin/" .. branch
+  local nvim_config_path = vim.fn.stdpath('config')
+  local commands = {
+    "git -C " .. nvim_config_path .. " fetch -q",
+    "git -C " .. nvim_config_path .. " status -s -b",
+    "git -C " .. nvim_config_path .. " clean -q -f -d",
+    "git -C " .. nvim_config_path .. " reset -q --hard origin/main",
+    "git -C " .. nvim_config_path .. " pull -q"
+  }
 
-        local git_version_command = "git --version"
-        local git_version = io.popen(git_version_command):read()
-        if git_version == nil or git_version == "" then
-            print("Git is not available, please install git before running this command")
-            return
-        end
-
-        os.execute(git_fetch_command)
-        local git_status = io.popen(git_status_command):read()
-
-        os.execute(git_clean_command)
-        os.execute(git_reset_command)
-        os.execute(git_pull_command)
-        local success_message = "Successfully updated HydraVim config!"
-        local error_message = "Could not update HydraVim from remote."
-        if string.match(git_status, "Your branch is up to date") then
-            success_message = "Your HydraVim config is already up to date"
-        end
-        if string.match(git_status, "Could not fetch origin") then
-            error_message = "Could not fetch HydraVim remote repository"
-            print(error_message)
-            return
-        end
-        print(success_message)
-        vim.cmd[[ PackerSync ]]
-
-    else
-        vim.cmd "echo ' Update was cancelled.'"
+  local success = true
+  for _, cmd in ipairs(commands) do
+    vim.fn.system(cmd)
+    if vim.v.shell_error ~= 0 then
+      success = false
+      break
     end
+  end
+
+  vim.cmd "redraw"
+  if success then
+    vim.api.nvim_echo({{"HydraVim config updated successfully!", "Normal"}}, true, {})
+    vim.cmd "Lazy sync"
+  else
+    vim.api.nvim_echo({{"Could not update HydraVim from remote repository.", "WarningMsg"}}, true, {})
+  end
 end
 
-return H
+function M.sync_config_repo()
+  async_update_hydravim()
+end
+
+return M
+
+
