@@ -1,5 +1,3 @@
-local cmd = vim.cmd
-
 local options = {
     opt = {
         mouse = 'a',
@@ -13,7 +11,9 @@ local options = {
         showmode = false,
         fillchars = { eob = " ", fold = " ", vert = "│"},
         list = true,
-        expandtab = true
+        expandtab = true,
+        autowrite = true,
+        scrolloff = 4
     },
     o = {
         syntax = 'on',
@@ -23,9 +23,21 @@ local options = {
         ignorecase = true,
         splitright = true,
         splitbelow = true,
+        -- fold
+        foldenable = true,
+        foldlevel = 99,
+        foldcolumn = '1',
+        foldlevelstart = 99,
+        fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]],
+        foldtext = [[' '.(v:foldend-v:foldstart+0).' lines...']],
     },
     wo = {
-        wrap = false
+        wrap = false,
+        -- fold
+        foldnestmax = 1,
+        foldminlines = 1,
+        foldmethod = "indent",
+        foldexpr = "nvim_treesitter#foldexpr()",
     },
     g = {
         mapleader = ' ',
@@ -40,3 +52,8 @@ for type, table in pairs(options) do
     vim[type][option] = value
   end
 end
+
+-- fold
+local cmd = vim.cmd
+cmd('highlight Folded ctermbg=NONE guibg=NONE')
+cmd('highlight FoldColumn ctermfg=NONE guifg=NONE')

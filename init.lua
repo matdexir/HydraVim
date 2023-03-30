@@ -5,7 +5,6 @@ local modules = {
 	'config.mappings',
 	'config.command',
 	'theme.theme',
-	'plugins.folding',
 }
 
 for i, name in pairs(modules) do
