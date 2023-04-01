@@ -124,11 +124,13 @@ To use follow the instructions below <p>
 <br />
 </details>
 
+## 📚 Wiki
+All HydraVim documentation is available on the [Wiki](https://github.com/HydraVim/HydraVim/wiki/), from installation to possible usage errors.
 
 ## 💫 Thanks to
 We are grateful to the repositories, plugin authors and the Neovim community for making HydraVim possible.  They offer special thanks to AstroVim, NvChad, LunarVim and CosmicVim for their inspiration and resources, as well as to all the plugin developers who have created useful tools for Neovim.
 
-## 🎈 Contributors
+## 🎈 Maintainers
   <span>
     <img src="https://user-images.githubusercontent.com/98850074/200189379-5b831bfd-a902-46c8-914e-284e53308dc2.png" width=100 height=100>
   </span>
@@ -136,4 +138,3 @@ We are grateful to the repositories, plugin authors and the Neovim community for
   <span> 
     <img src="https://user-images.githubusercontent.com/98850074/200189532-28bd2d72-76e8-4650-a293-9fdfa64c4b73.png" width=100 height=100>
   </span>
-
