@@ -11,7 +11,7 @@
   - Autocompletion with [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
   - Terminal with [Toggleterm](https://github.com/akinsho/toggleterm.nvim)
   - Automatic [LSP](https://neovim.io/doc/user/lsp.html) with [Mason](https://github.com/williamboman/mason.nvim) and [LSPConfig](https://github.com/neovim/nvim-lspconfig)
-  - Syntax highlighting with [Treesitter](https://github.com/tree-sitter/tree-sitter)
+  - Syntax highlighting with [Tree-sitter](https://github.com/tree-sitter/tree-sitter)
   - [Statusline](https://github.com/nvim-lualine/lualine.nvim) and [Bufferline](https://github.com/akinsho/bufferline.nvim)
   - Git integration with [DiffView](https://github.com/sindrets/diffview.nvim) and [GitSings](https://github.com/lewis6991/gitsigns.nvim)
   - Easily customize
@@ -75,8 +75,8 @@ git clone https://github.com/HydraVim/HydraVim.git $HOME\AppData\Local\nvim --de
 
 ## 🔠 Languages
 
-Nvim supports Language Server Protocol (LSP), which means that it acts as a client for LSP servers. Thus, all language support is done through [Mason (LSP Installer)](https://github.com/williamboman/mason.nvim) and automatically configured by [LSP Config](https://github.com/neovim/nvim-lspconfig). Use the Mason command to manage your language servers.
-[Nvim-CMP](https://github.com/hrsh7th/nvim-cmp) is responsible for giving suggestions for completing your code, including snippets.
+Nvim supports Language Server Protocol (LSP), which means that it acts as a client for LSP servers. Thus, all language support is done through [Mason (LSP Installer)](https://github.com/williamboman/mason.nvim) and automatically configured by [LSPConfig](https://github.com/neovim/nvim-lspconfig). Use the Mason command to manage your language servers.
+[nvim-cmp](https://github.com/hrsh7th/nvim-cmp) is responsible for giving suggestions for completing your code, including snippets.
 Syntax highlighting is installed automatically through the
 [Tree-sitter](https://github.com/tree-sitter/tree-sitter)
 
