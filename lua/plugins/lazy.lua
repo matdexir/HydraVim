@@ -26,10 +26,6 @@ require("lazy").setup({
         }
     },
     {
-        'kazhala/close-buffers.nvim',
-        event = {'BufReadPre', 'BufNewFile'},
-    },
-    {
         'terrortylor/nvim-comment',
         event = {'BufReadPre', 'BufNewFile'},
         config = function ()
