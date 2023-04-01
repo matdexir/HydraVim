@@ -6,17 +6,21 @@ end
 
 bufferline.setup {
     options = {
-        show_close_icon = false,
+        buffer_close_icon= '',
+        modified_icon = '●',
+        left_trunc_marker = '',
+        right_trunc_marker = '',
         offsets = {
             {filetype = "NvimTree", text = "Files", text_align = "center", separator = false}
         },
         indicator = {
-            icon = '●',
             style = 'none'
         },
+        show_buffer_close_icons = true,
+        show_close_icon = false,
         diagnostics = "nvim_lsp",
         diagnostics_update_in_insert = true,
-        separator_style = 'any',
+        always_show_bufferline = false,
         groups = {
             items = {
                 require('bufferline.groups').builtin.pinned:with({ icon = "" })
