@@ -62,8 +62,12 @@ mv ~/.config/nvim ~/.config/nvim.bak
 git clone https://github.com/HydraVim/HydraVim.git --depth 1 --branch main ~/.config/nvim && nvim
 ```
 
-### 🪟 Windows - Test
-- Powershell
+### 🪟 Windows - Powershell
+- Backup of your current nvim
+```powershell
+Move-Item $HOME\AppData\Local\nvim $HOME\AppData\Local\nvim.bak
+```
+- Clone the HydraVim and start Neovim
 ```powershell
 git clone https://github.com/HydraVim/HydraVim.git $HOME\AppData\Local\nvim --depth 1 --branch main && nvim
 ```
@@ -81,9 +85,10 @@ rm -rf ~/.cache/nvim
 
 ### 🪟 Windows
 - Powershell
+
 ```powershell
-Remove-Item -Path $HOME\AppData\Local\nvim -Force
-Remove-Item -Path $HOME\AppData\Local\nvim-data -Force
+Remove-Item -Path $HOME\AppData\Local\nvim -Force -Recurse
+Remove-Item -Path $HOME\AppData\Local\nvim-data -Force -Recurse
 ```
 
 <br>
@@ -132,9 +137,3 @@ We are grateful to the repositories, plugin authors and the Neovim community for
     <img src="https://user-images.githubusercontent.com/98850074/200189532-28bd2d72-76e8-4650-a293-9fdfa64c4b73.png" width=100 height=100>
   </span>
 
-
-## 📖 General
-
-<img src="https://img.shields.io/badge/Mantained:-Yes! (Bug fixes, Repository , Website..)-brightgreen?style=flat">
-<img src="https://img.shields.io/badge/State:-Optimized (Utilizable)-brightgreen?style=flat">
-<img src="https://img.shields.io/badge/RAM usage:-~138MB/Max-brightgreen?style=flat">
