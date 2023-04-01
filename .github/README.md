@@ -8,13 +8,12 @@
 
 ## ✨ Features
   - Fast startup times
-  - Autocompletion with nvim-cmp
-  - Terminal with Toggleterm
-  - LSP (Language Server Protocol)
-  - Automatic LSP with Mason and LSP Config.
-  - Syntax highlighting with Treesitter
-  - Statusline and Bufferline
-  - Integration with Git
+  - Autocompletion with [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+  - Terminal with [Toggleterm](https://github.com/akinsho/toggleterm.nvim)
+  - Automatic [LSP](https://neovim.io/doc/user/lsp.html) with [Mason](https://github.com/williamboman/mason.nvim) and [LSPConfig](https://github.com/neovim/nvim-lspconfig)
+  - Syntax highlighting with [Treesitter](https://github.com/tree-sitter/tree-sitter)
+  - [Statusline](https://github.com/nvim-lualine/lualine.nvim) and [Bufferline](https://github.com/akinsho/bufferline.nvim)
+  - Git integration with [DiffView](https://github.com/sindrets/diffview.nvim) and [GitSings](https://github.com/lewis6991/gitsigns.nvim)
   - Easily customize
 
 <details>
