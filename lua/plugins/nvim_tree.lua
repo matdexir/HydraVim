@@ -1,8 +1,4 @@
-local present, nvim_tree = pcall(require, "nvim-tree")
-
-if not present then
-    return
-end
+local nvim_tree = require("nvim-tree")
 
 nvim_tree.setup({
     sort_by = "case_sensitive",

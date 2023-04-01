@@ -1,8 +1,4 @@
-local present, lualine = pcall(require, "lualine")
-
-if not present then
-    return
-end
+local lualine = require("lualine")
 
 local file_icon = require('lualine.components.filename'):extend()
 file_icon.apply_icon = require('lualine.components.filetype').apply_icon

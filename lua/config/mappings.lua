@@ -18,7 +18,7 @@ local local_mappings = {
         ['<leader>e'] = {'<CMD>NvimTreeToggle <CR>'},
         ['<TAB>'] = {'<CMD>BufferLineCycleNext<CR>'},
         ['<S-TAB>'] = {'<CMD>BufferLineCyclePrev<CR>'},
-        ['<C-w>'] = {'<CMD>BDelete this<CR>'},
+        ['<C-w>'] = {'<CMD>HydraVimCloseBuffer<CR>'},
         ['<leader>p'] = {'<CMD>BufferLineTogglePin<CR>'},
         ['<A-h>'] = {'<CMD>ToggleTerm size=15 direction=horizontal<CR>'},
         ['<A-m>'] = {'<CMD>ToggleTerm size=45 direction=vertical<CR>'},

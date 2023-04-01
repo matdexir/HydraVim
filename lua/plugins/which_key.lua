@@ -1,14 +1,4 @@
-local present, wk = pcall(require, "which-key")
-
-if not present then
-    return
-end
-
-local present2, tm = pcall(require, "toggleterm.terminal")
-
-if not present2 then
-    return
-end
+local wk = require("which-key")
 
 wk.setup {
     plugins = {
