@@ -6,25 +6,25 @@ end
 
 bufferline.setup {
     options = {
-		show_close_icon = false,
-		offsets = {
+        show_close_icon = false,
+        offsets = {
             {filetype = "NvimTree", text = "Files", text_align = "center", separator = false}
         },
-    	indicator = {
+        indicator = {
             icon = '●',
             style = 'none'
         },
-		diagnostics = "nvim_lsp",
-    	diagnostics_update_in_insert = true,
-		separator_style = 'any',
+        diagnostics = "nvim_lsp",
+        diagnostics_update_in_insert = true,
+        separator_style = 'any',
         groups = {
             items = {
                 require('bufferline.groups').builtin.pinned:with({ icon = "" })
             }
         },
-		diagnostics_indicator = function(count, level)
-      		local icon = level:match("error") and " " or " "
-      		return icon .. count
-    	end,
-	}
+        diagnostics_indicator = function(count, level)
+            local icon = level:match("error") and " " or " "
+            return icon .. count
+        end,
+    }
 }

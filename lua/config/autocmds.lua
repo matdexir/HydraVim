@@ -16,16 +16,16 @@ local filetypes = {
 }
 
 autocmd({ "InsertEnter"}, {
-	pattern = '*',
+    pattern = '*',
     command = "setlocal nohlsearch"
 })
 
 autocmd({ "InsertLeave"}, {
-	pattern = '*',
+    pattern = '*',
     command = "setlocal hlsearch",
 })
 
 autocmd({ "TextChanged", "TextChangedI" }, {
-	pattern = filetypes,
+    pattern = filetypes,
     command = "silent write"
 })
