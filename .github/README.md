@@ -70,24 +70,6 @@ git clone https://github.com/HydraVim/HydraVim.git $HOME\AppData\Local\nvim --de
           
 <br>
           
-## ⭕ Uninstall
-  
-### 🐧 Linux/🍎macOS
-```bash
-rm -rf ~/.config/nvim
-rm -rf ~/.local/share/nvim
-rm -rf ~/.cache/nvim
-```
-
-### 🪟 Windows
-- Powershell
-```powershell
-Remove-Item -Path $HOME\AppData\Local\nvim -Force
-Remove-Item -Path $HOME\AppData\Local\nvim-data -Force
-```
-
-<br>
-
 ## 🔠 Languages
 
 Nvim supports Language Server Protocol (LSP), which means that it acts as a client for LSP servers. Thus, all language support is done through [Mason (LSP Installer)](https://github.com/williamboman/mason.nvim) and automatically configured by [LSP Config](https://github.com/neovim/nvim-lspconfig). Use the Mason command to manage your language servers.
