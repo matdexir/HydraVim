@@ -1,9 +1,31 @@
 <h1 align="center">🌊 HydraVim</h1>
 
 <p align="center">
-<img src="https://img.shields.io/github/issues/HydraVim/Hydravim?color=171b20&label=Issues%20%20&logo=gnubash&labelColor=e05f65&logoColor=ffffff">&nbsp;&nbsp;&nbsp;
-<img src="https://img.shields.io/github/forks/Hydravim/HydraVim?color=171b20&label=Forks%20%20&logo=git&labelColor=f1cf8a&logoColor=ffffff">&nbsp;&nbsp;&nbsp;
-<img src="https://img.shields.io/github/stars/HydraVim/HydraVim?color=171b20&label=Stargazers&logo=github&labelColor=70a5eb">&nbsp;&nbsp;&nbsp;
+    <a href="https://github.com/HydraVim/HydraVim/releases">
+    <img
+        alt="Release"
+        src="https://img.shields.io/github/v/release/HydraVim/HydraVim.svg?style=for-the-badge&logo=github&color=F2CDCD&logoColor=D9E0EE&labelColor=363A4F">
+        </a>
+    <a href="https://github.com/HydraVim/HydraVim/stargazers">
+    <img
+        alt="Stars"
+        src="https://img.shields.io/github/stars/HydraVim/HydraVim?colorA=363A4F&colorB=B7BDF8&logo=adafruit&logoColor=D9E0EE&style=for-the-badge">
+    </a>
+    <a href="https://github.com/HydraVim/HydraVim/issues">
+    <img
+        alt="Issues"
+        src="https://img.shields.io/github/issues-raw/HydraVim/HydraVim?colorA=363A4f&colorB=F5A97F&logo=github&logoColor=D9E0EE&style=for-the-badge">
+    </a>
+    <a href="https://github.com/HydraVim/HydraVim/contributors">
+    <img
+        alt="Contributors"
+        src="https://img.shields.io/github/contributors/HydraVim/HydraVim?colorA=363A4F&colorB=B5E8E0&logo=git&logoColor=D9E0EE&style=for-the-badge">
+    </a>
+    <img
+        alt="Code Size"
+        src="https://img.shields.io/github/languages/code-size/HydraVim/HydraVim?colorA=363A4F&colorB=DDB6F2&logo=gitlfs&logoColor=D9E0EE&style=for-the-badge">
+</p>
+
 
 </b><br>Welcome to official **Hydra 🌊** Repository! Carefully designed with usability and funcionality in mind , keep the lightness on resources! All-in-one for back-end and front-end developers.</p>
 
