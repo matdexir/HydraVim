@@ -27,7 +27,7 @@
 </p>
 
 
-</b><br>Welcome to official **Hydra 🌊** Repository! Carefully designed with usability and funcionality in mind , keep the lightness on resources! All-in-one for back-end and front-end developers.</p>
+</b><br>Welcome to official **Hydra 🌊** Repository! Carefully designed with usability and functionality in mind , keep the lightness on resources! All-in-one for back-end and front-end developers.</p>
 
 <br />
 
