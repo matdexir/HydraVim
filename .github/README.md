@@ -1,4 +1,4 @@
-<h1 align="center">🌊 HydraVim</h1>
+<h1 align="center"><img height="180em" width="180em" src="https://i.ibb.co/HGnRJp8/logo.png"></img></h1>
 
 <p align="center">
     <a href="https://github.com/HydraVim/HydraVim/releases">
