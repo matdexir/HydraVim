@@ -29,7 +29,8 @@
 
 </b><br>Welcome to official **Hydra 🌊** Repository! Carefully designed with usability and functionality in mind , keep the lightness on resources! All-in-one for back-end and front-end developers.</p>
 
-<br />
+## 🚀 Showcase
+<img src="https://github.com/HydraVim/Hydra-Assets/blob/main/Images/preview_in_code.png">
 
 ## ✨ Features
   - Fast startup times
