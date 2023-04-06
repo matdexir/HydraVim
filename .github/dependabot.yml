@@ -1,0 +1,28 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    allow:
+      - dependency-type: "all"
+    ignore:
+      - vulnerabilities: "low"
+      - vulnerabilities: "moderate"
+    directory: "/"
+    notification:
+      recipients:
+        - "iamx.3ur@protonmail.com"
+      on:
+        - "critical"
+    directory: "/"
+    secrets:
+      - "secrets/**/*.yml"
+      - "secrets/**/*.json"
+      - "secrets/**/*.key"
+    schedule:
+      interval: "daily"
+    allow:
+      - dependency-type: "direct"
+    ignore:
+      - vulnerabilities: "none"
