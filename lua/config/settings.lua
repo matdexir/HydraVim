@@ -44,6 +44,8 @@ local options = {
         maplocalleader = ' ',
         loaded_netrw = 1,
         loaded_netrwPlugin = 1,
+        neovide_scale_factor = 0.8,
+        neovide_hide_mouse_when_typing = true
     }
 }
 
