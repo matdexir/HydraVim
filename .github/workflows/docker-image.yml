@@ -6,7 +6,6 @@ on:
       - 'main'
 
 jobs:
-  echo "Got release version ${{ steps.release.outputs.version }}"
   docker:
     runs-on: ubuntu-latest
     steps:
