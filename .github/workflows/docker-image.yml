@@ -28,15 +28,6 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v4
         with:
-          context: .
-          dockerfile: |
-            FROM alpine:latest
-
-            RUN apk add --no-cache git neovim ripgrep build-base bash python3 py3-pip \
-              && pip3 install --upgrade pip \
-              && pip3 install pynvim \
-              && git clone https://github.com/HydraVim/HydraVim.git --depth 1 --branch main ~/.config/nvim
-
-            CMD ["nvim"]
+          context: ./.github/workflows/
           push: true
           tags: diogoss/hydravim:latest
