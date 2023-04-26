@@ -32,4 +32,4 @@ jobs:
           push: true
           tags: |
             diogoss/hydravim:latest
-            diogoss/hydravim:$(date +%s)
+            diogoss/hydravim:$(date +%Y-%m-%d-%H-%M-%S)
