@@ -30,4 +30,6 @@ jobs:
         with:
           context: ./.github/workflows/
           push: true
-          tags: diogoss/hydravim:latest
+          tags: |
+            diogoss/hydravim:latest
+            diogoss/hydravim:${{ github.run_number }}-$(date +%s)
