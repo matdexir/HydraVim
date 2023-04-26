@@ -42,26 +42,6 @@
   - Git integration with [DiffView](https://github.com/sindrets/diffview.nvim) and [GitSings](https://github.com/lewis6991/gitsigns.nvim)
   - Easily customize
 
-<details>
-  <summary> <b>Themes </b> </summary>
-
-![TNPrint](https://user-images.githubusercontent.com/98850074/200186219-31bc10d3-8818-46ba-820e-ef8b7c5c9e40.png)
-
-<hr>
-
-<br>
-
-![CPPRINT](https://user-images.githubusercontent.com/98850074/200188164-d7ce95dd-cb35-40e8-b192-10aa02b18341.png)
-
-<hr>
-
-<br>
-
-![githubmode](https://user-images.githubusercontent.com/98850074/200182890-3cc9326e-811c-4bd4-a5bc-2cf2931b384b.png)
-</details>
-
-<br>
-
 ## 🎯 Requirements
 
 - [Neovim](https://neovim.io/) 8.0+
@@ -95,8 +75,6 @@ Move-Item $HOME\AppData\Local\nvim $HOME\AppData\Local\nvim.bak
 ```powershell
 git clone https://github.com/HydraVim/HydraVim.git $HOME\AppData\Local\nvim --depth 1 --branch main && nvim
 ```
-          
-<br>
 
 ## 🔠 Languages
 
