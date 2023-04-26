@@ -6,6 +6,7 @@ on:
       - 'main'
 
 jobs:
+  echo "Got release version ${{ steps.release.outputs.version }}"
   docker:
     runs-on: ubuntu-latest
     steps:
@@ -32,4 +33,3 @@ jobs:
           push: true
           tags: |
             diogoss/hydravim:latest
-            diogoss/hydravim:$(date +%Y-%m-%d-%H-%M-%S)
