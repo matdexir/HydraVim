@@ -102,6 +102,7 @@ ts_update()
             require('plugins.buffer')
         end
     },
+  --[[ 
     {
         'akinsho/toggleterm.nvim',
         version = '*',
@@ -110,6 +111,7 @@ ts_update()
             require('plugins.toggleterm')
         end
     },
+  ]]
   {
         'voldikss/vim-floaterm',
         version = "*",
