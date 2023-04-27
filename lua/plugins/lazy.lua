@@ -110,6 +110,14 @@ ts_update()
             require('plugins.toggleterm')
         end
     },
+  {
+        'voldikss/vim-floaterm',
+        version = "*",
+        cmd={"FloatermToggle", "FloatermNew", "FloatermNext", "FloatermPrev"},
+        config = function ()
+           require('plugins.floaterm') 
+        end
+  },
     {
         'nvim-telescope/telescope.nvim',
         dependencies = { 'nvim-lua/plenary.nvim' },
